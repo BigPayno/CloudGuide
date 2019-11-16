@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: Service-Provider
+eureka:
+  instance:
+    appname: Service-Provider
+    app-group-name: Service
+    lease-expiration-duration-in-seconds: 9
+    lease-renewal-interval-in-seconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8081/eureka/,http://peer1:8080/eureka/
