@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: HTTP_ROUTER
+eureka:
+  instance:
+    appname: HTTP_ROUTER
+    app-group-name: Service
+    lease-expiration-duration-in-seconds: 9
+    lease-renewal-interval-in-seconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8081/eureka/,http://peer1:8080/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /BD
+      url: http://www.baidu.com
+    api-b:
+      path: /Server/**
+      serviceId: Server-Provider
+    api-c:
+      path: /Sevice/**
+      serviceId: Sevice-Provider
+    api-d:
+      path: /**/**
+      url: forward:/Server
+  ignored-services:
+  sensitive-headers:
+  add-host-header: true

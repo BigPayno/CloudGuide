@@ -10,7 +10,8 @@
 
     <modules>
         <module>eurekaServiceRegistry</module>
-        <module>ribbonLoadBlance</module>
+        <module>ribbonLoadBalance</module>
+        <module>zuulRouter</module>
     </modules>
 
 </project>

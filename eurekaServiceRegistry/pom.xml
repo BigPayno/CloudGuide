@@ -11,7 +11,7 @@
     <groupId>com.payno</groupId>
     <artifactId>eurekaServiceRegistry</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka</name>
+    <name>eurekaServiceRegistry</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
