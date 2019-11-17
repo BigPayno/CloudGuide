@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: Feign
+eureka:
+  instance:
+    appname: Feign
+    app-group-name: Service
+    lease-expiration-duration-in-seconds: 9
+    lease-renewal-interval-in-seconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8081/eureka/,http://peer1:8080/eureka/
+feign:
+  okhttp:
+    enabled: false
+  httpclient:
+    enabled: false
+  compression:
+    request:
+      enabled: true
+      mime-type: text/html,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true

@@ -11,6 +11,8 @@
     <modules>
         <module>eurekaServiceRegistry</module>
         <module>ribbonLoadBalance</module>
+        <module>feignRemoteAccess</module>
+        <module>delayedtask</module>
         <module>zuulRouter</module>
     </modules>
 

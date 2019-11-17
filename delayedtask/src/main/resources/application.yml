@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: Task
+  redis:
+    host: 127.0.0.0
+    port: 6379
+eureka:
+  instance:
+    appname: Task
+    app-group-name: Service
+    lease-expiration-duration-in-seconds: 9
+    lease-renewal-interval-in-seconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8081/eureka/,http://peer1:8080/eureka/
