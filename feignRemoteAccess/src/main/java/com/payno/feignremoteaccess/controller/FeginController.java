@@ -31,6 +31,12 @@ public class FeginController {
 
     @PostMapping(value = "/upload",produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void upload(@RequestPart(value = "file") MultipartFile file){
+
         feignUploadClient.uploadFile(file);
+    }
+
+    @PostMapping(value = "/upload2",produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public void upload2(@RequestPart(value = "file") MultipartFile file){
+        delayedClient.fileUpload(file);
     }
 }

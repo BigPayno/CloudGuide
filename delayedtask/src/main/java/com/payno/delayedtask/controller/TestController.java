@@ -30,6 +30,11 @@ public class TestController {
 
     @PostMapping(value = "/upload",produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void upload(MultipartFile file){
-        System.out.println(file.getSize());
+        try {
+            Thread.sleep(3000);
+            System.out.println(file.getSize());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

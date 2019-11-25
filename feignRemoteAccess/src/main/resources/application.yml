@@ -18,6 +18,8 @@ feign:
     enabled: false
   httpclient:
     enabled: false
+  hystrix:
+    enabled: true
   compression:
     request:
       enabled: true
