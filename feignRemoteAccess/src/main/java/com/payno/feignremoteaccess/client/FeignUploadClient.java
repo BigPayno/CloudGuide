@@ -1,21 +1,21 @@
 package com.payno.feignremoteaccess.client;
 
-import feign.*;
+import feign.Client;
+import feign.Feign;
+import feign.RequestLine;
+import feign.RequestTemplate;
 import feign.codec.EncodeException;
 import feign.codec.Encoder;
-import feign.form.*;
-import feign.form.spring.SpringFormEncoder;
+import feign.form.ContentProcessor;
+import feign.form.ContentType;
+import feign.form.MultipartFormContentProcessor;
+import feign.form.UrlencodedFormContentProcessor;
 import feign.form.spring.SpringManyMultipartFilesWriter;
 import feign.form.spring.SpringSingleMultipartFileWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
