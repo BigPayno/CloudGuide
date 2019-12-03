@@ -1,6 +1,7 @@
 package com.payno.feignremoteaccess.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
         configuration = {FeignConfiguration.class,FeignUploadConfiguration.class},
         fallback =DelayedHystrixClient.class
 )
+@Primary
 public interface DelayedClient {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public ResponseEntity<byte[]> test();

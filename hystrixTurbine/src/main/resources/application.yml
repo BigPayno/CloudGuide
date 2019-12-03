@@ -1,0 +1,25 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: HystrixTurbine
+eureka:
+  instance:
+    appname: HystrixTurbine
+    app-group-name: Service
+    lease-expiration-duration-in-seconds: 9
+    lease-renewal-interval-in-seconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8081/eureka/,http://peer1:8080/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, hystrix.stream # Turbine 要监控的端点
+turbine:
+  app-config: Feign # Turbine 要监控的服务
+  cluster-name-expression: "'default'" # 集群名称，默认 default
+  stream:
+    enabled: false

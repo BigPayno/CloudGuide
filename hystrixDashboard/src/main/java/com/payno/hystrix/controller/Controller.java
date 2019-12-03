@@ -4,6 +4,7 @@ import com.payno.hystrix.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  *          对用户屏蔽错误，做优雅提示。
  */
 @RestController
+@RequestMapping("user")
 public class Controller {
     @Autowired
     UserService userService;

@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class DelayedHystrixClient implements DelayedClient{
     @Override
     public ResponseEntity<byte[]> test() {
-        return null;
+        return ResponseEntity.ok("error".getBytes());
     }
 
     @Override

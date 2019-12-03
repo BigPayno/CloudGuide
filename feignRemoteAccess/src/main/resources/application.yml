@@ -27,3 +27,8 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, hystrix.stream
