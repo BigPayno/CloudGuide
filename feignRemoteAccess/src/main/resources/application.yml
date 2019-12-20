@@ -31,4 +31,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, hystrix.stream
+        include: health, info, h.stream

@@ -1,4 +1,4 @@
-package com.payno.hystrix.command;
+package com.payno.h.command;
 
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;

@@ -1,8 +1,8 @@
-package com.payno.hystrix.controller;
+package com.payno.h.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.payno.hystrix.command.FallbackBadRequestException;
-import com.payno.hystrix.command.FallbackOtherException;
+import com.payno.h.command.FallbackBadRequestException;
+import com.payno.h.command.FallbackOtherException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.payno.hystrix.service;
+package com.payno.h.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;

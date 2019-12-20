@@ -17,7 +17,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, hystrix.stream # Turbine 要监控的端点
+        include: health, info, h.stream # Turbine 要监控的端点
 turbine:
   app-config: Feign,HystrixDashboard # Turbine 要监控的服务
   cluster-name-expression: "'default'" # 集群名称，默认 default

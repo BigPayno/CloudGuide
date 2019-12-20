@@ -1,6 +1,6 @@
-package com.payno.hystrix.controller;
+package com.payno.h.controller;
 
-import com.payno.hystrix.service.UserService;
+import com.payno.h.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

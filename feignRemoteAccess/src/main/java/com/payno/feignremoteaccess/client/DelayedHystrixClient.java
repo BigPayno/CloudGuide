@@ -18,7 +18,7 @@ public class DelayedHystrixClient implements DelayedClient{
 
     @Override
     public String fileUpload(MultipartFile file) {
-        System.out.println("hystrix !!!");
-        return "error! this is feign hystrix";
+        System.out.println("h !!!");
+        return "error! this is feign h";
     }
 }

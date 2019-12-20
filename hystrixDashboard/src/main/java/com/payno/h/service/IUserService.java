@@ -1,4 +1,4 @@
-package com.payno.hystrix.service;
+package com.payno.h.service;
 
 /**
  * @author payno
